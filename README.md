@@ -1,5 +1,15 @@
 # React + TypeScript + Vite
 
+
+2048 is a a game in hexagon tiles (https://www.redblobgames.com/grids/hexagons/) based on sliding, 
+the rule of the game pretty simple every two tiles with the same value can be merged into one and their sum will combine,
+reach to 2048 and you won!
+
+I developed this game to experiment usage of Vite, React.js, Redux toolkit, typescript, svg's, animations, and Jest unit testing.
+I will continue to develope the game but for now its uncomplete from my opinion.
+feel free to give an hand.
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
