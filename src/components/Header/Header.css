@@ -1,0 +1,22 @@
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 5vh;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+
+}
+
+.title {
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0;
+    color: #776e65;
+    display: inline-block; /* Display as inline-block */
+}
+
+  

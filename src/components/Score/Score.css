@@ -1,0 +1,45 @@
+.scores-container {
+    display: flex; 
+    justify-content: space-between;
+  }
+ 
+  .score-container,
+  .best-container {
+    display: inline-block; 
+    background: #bbada0;
+    padding: 15px 25px;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: white;
+    text-align: center;
+    height: 70px; 
+    text-overflow: ellipsis
+  }
+  
+  .score-container {
+    margin-right: 10px; 
+  }
+  
+  .best-container {
+    margin-left: 10px; 
+  }
+
+
+
+@keyframes score-popup {
+  100%,0% { opacity: 0.5 }
+  50% { opacity: 1 }
+  from {right:350px; top: 10px; }
+  to {right:200px; top: 0px; font-size: larger;}
+}
+
+
+.score-popup {
+  padding: 25px 0px 0px 40px;
+  color: rgb(176, 138, 0);
+  position: absolute;
+  opacity: 1;
+  animation: score-popup 2s linear;
+}

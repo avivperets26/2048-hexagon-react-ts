@@ -1,0 +1,25 @@
+.game-container {
+  width: 500px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0px;;
+}
+.game-status-contaier{
+    display: flex;
+    top: 70vh;
+    left: 170px;
+    position: relative;
+    
+}
+.status-message {
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.gme-cnt{
+  width: 80vw; /* Adjust based on preference */
+  max-width: 600px; /* To prevent it from becoming too wide on large screens */
+  margin: auto; /* Center align */
+  display: flex;
+}

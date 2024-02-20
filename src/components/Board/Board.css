@@ -1,0 +1,19 @@
+.hexagon-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vw; 
+  }
+  .board-container{
+    position: relative;
+    left:8vw;
+    bottom: 8vh;
+  }
+
+  /* Media query for larger screens */
+@media screen and (min-width: 1024px) and (min-width: 2120px) and (max-width: 3840px) {
+  .board-container {
+    left: auto; 
+    right: 13vw;
+    bottom: 5vh; 
+  }
+}

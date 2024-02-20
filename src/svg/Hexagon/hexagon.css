@@ -1,0 +1,12 @@
+@keyframes popup {
+    0% {
+      transform: scale(0); /* Start the animation from a scale of 0 */
+    }
+    100% {
+      transform: scale(1); /* End the animation at the original scale */
+    }
+  }
+
+  .popup {
+    animation: popup 0.3s ease-out; /* Apply the popup animation */
+  }
