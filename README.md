@@ -9,6 +9,11 @@ I developed this game to experiment usage of Vite, React.js, Redux toolkit, type
 I will continue to develope the game but for now its uncomplete from my opinion.
 feel free to give an hand.
 
+Next Goals: 
+Finishing build the unit testing
+Scale the game to dynamic radius
+Build both client and fetch option as fanctionality.
+Adding more animations.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
