@@ -50,3 +50,6 @@
 //     expect(startNewGame).toHaveBeenCalled();
 //   });
 // });
+describe.skip("Game.test not finised", () => {
+  it("Game.test not finised", () => {});
+});

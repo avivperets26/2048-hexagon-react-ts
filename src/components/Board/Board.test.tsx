@@ -78,3 +78,6 @@
 //     expect(hexagonTiles.length).toBe(7);
 //   });
 // });
+describe.skip("Board.test not finised", () => {
+  it("Board.test not finised", () => {});
+});
