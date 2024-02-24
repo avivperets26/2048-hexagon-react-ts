@@ -26,9 +26,10 @@ beforeEach(() => {
   (hooks.useDispatch as jest.Mock).mockReturnValue(jest.fn());
 
   // Adjusting useSelector mock
+  // Adjusting useSelector mock
   (hooks.useSelector as jest.Mock).mockImplementation(
     (selector: SelectorFunction<HexagonState>) => {
-      // Mocking both baseTile and tiles to ensure consistency across components
+      // Mocking both baseTile, tiles, and adding missing properties to ensure consistency across components
       const mockState = {
         hexagon: {
           baseTile: [
@@ -45,6 +46,9 @@ beforeEach(() => {
             { x: 0, y: 1, z: -1, value: 2 }, // Top
             { x: 0, y: -1, z: 1, value: 2 }, // Bottom
           ],
+          overlayPositions: [], // Assuming this is the correct type and structure for this example
+          loading: false, // Assuming not loading for this mock
+          error: null, // Assuming no error for this mock
         },
       };
       return selector(mockState);
