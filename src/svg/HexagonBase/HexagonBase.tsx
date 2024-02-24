@@ -12,9 +12,6 @@ interface HexagonBaseProps {
 }
 
 const HexagonBase: React.FC<HexagonBaseProps> = ({
-  y,
-  x,
-  z,
   overlayColor = "#B5A89B",
   innerColor = "none",
 }) => {

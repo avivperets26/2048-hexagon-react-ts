@@ -59,38 +59,34 @@ export const updateTilesMovement = createAsyncThunk<
   ServerTile[],
   MovementRequest,
   { state: RootState }
->(
-  "hexagon/updateTilesMovement",
-  async ({ key, tiles }, { getState, rejectWithValue }) => {
-    try {
-      const state = getState();
-      const body = tiles;
-      const response = await fetch("http://localhost:13337/2", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(body),
-      });
+>("hexagon/updateTilesMovement", async ({ tiles }, { rejectWithValue }) => {
+  try {
+    const body = tiles;
+    const response = await fetch("http://localhost:13337/2", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
 
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const data: ServerTile[] = await response.json();
-
-      // Return the response data
-      return data;
-    } catch (error) {
-      console.log(`error:${error}`);
-      return rejectWithValue((error as Error).message);
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
     }
+    const data: ServerTile[] = await response.json();
+
+    // Return the response data
+    return data;
+  } catch (error) {
+    console.log(`error:${error}`);
+    return rejectWithValue((error as Error).message);
   }
-);
+});
 
 //not in use
 export const removeAndUpdateTile = createAsyncThunk(
   "hexagon/removeAndUpdateTile",
-  async (tileToRemove: Tile, { dispatch, getState }) => {
+  async (tileToRemove: Tile, { dispatch }) => {
     // Remove the tile
     dispatch(removeTile(tileToRemove));
 
@@ -102,7 +98,7 @@ export const removeAndUpdateTile = createAsyncThunk(
 // making sure that first data will be update then fetch will be sent to server for generated data
 export const updateAndGenerateTile = createAsyncThunk(
   "hexagon/updateAndGenerateTile",
-  async (tileToUpdate: Tile[], { dispatch, getState }) => {
+  async (tileToUpdate: Tile[], { dispatch }) => {
     // update the tiles
     dispatch(updateTiles(tileToUpdate));
 
